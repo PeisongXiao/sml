@@ -1,0 +1,7 @@
+/target
+*.log
+*.aux
+*.pdf
+*.tex
+*.synctex.gz
+*.out

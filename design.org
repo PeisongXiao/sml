@@ -1,0 +1,22 @@
+#+TITLE: Design of SML (Script Markup Language)
+#+OPTIONS: toc:nil date:nil author:nil
+
+* Tools
+** smlc
+Pre-process an SML file for faster reading
+
+** sml (lib)
+For reading the contents of a pre-processed SML file into memory.
+
+Provides needed methods for operations.
+
+*** smlsgn.rs
+A list of values for signals that would be sent by the SML file.
+
+* smlc
+Preps the file into a *.smlc* file.
+
+* sml (lib)
+** SMLScript
+*** Fields
+**** main: SMLFrame

@@ -1,0 +1,33 @@
+#+TITLE: Processing of SML (Script Markup Language)
+#+OPTIONS: toc:nil date:nil author:nil
+
+* Parsing
+** Checks for syntax
+** Check for identifier uniqueness
+** Record all identifiers
+** Count the number of lines
+** Determine the size of the bits array for flags
+
+* Prepped file
+** Generate identifier list and hash table
+** Generate list of values for signals
+** Format
+identifier hash + content + next hash
+** Hash to zero the end (NULL)
+
+* User operations
+** Jumps
+** Flags
+*** On
+*** Off
+*** Toggle
+*** Probe
+** Values
+*** Set
+*** Probe
+** Options
+*** Auto-run
+Automatically runs all jumps and conditionals.
+** Operations
+*** Type
+*** Value

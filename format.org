@@ -1,0 +1,64 @@
+#+TITLE: Format of SML (Script Markup Language)
+#+OPTIONS: toc:nil date:nil author:nil
+
+* Language Objects
+** Identifiers
+The same identifier can be used for objects of different
+types.  Identifiers can only contain alphanumeric characters and '_'
+and '-'.
+
+Identifier names cannot be "LINE[number]"
+
+** Name
+Names for dialogues.
+
+** Line
+A "single line" of dialogue.
+
+** Jump tags
+Tags for jumping to different parts of the script.
+
+The starter tag is always *|main|*
+
+** Flags
+Keep track of progress by using flags.
+
+Note that all flags are stored as binary bits in an array of *u8*
+ints.
+
+** Values
+Keep track of progress by using values to indicate certain things.
+
+** Signals
+A signal for the user.  The list of signals will be reported as a list
+of values back to the user during compilation.
+
+** Blocks
+Enclosed within "{}".  Things within will be treated as a single line.
+
+* Language Operations
+** Jumps
+Jump to the given tag using ">tag"
+
+** Changes of flags
+*** On
+In the form of: "+flag"
+*** Off
+In the form of: "-flag"
+*** Toggle
+In the form of: "^flag"
+
+** Changes of values
+In the form of: ":identifier = arithmetic expression"
+
+** Send signal
+In the form of: "!signal"
+
+** Speaker
+In the form of: "[name]"
+
+** Conditions
+In the form of: "?expression: TODO"
+
+** Imports
+In the form of: "~path_to_file"
